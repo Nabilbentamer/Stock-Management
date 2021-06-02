@@ -1,0 +1,49 @@
+{% extends 'template.html.twig' %}
+
+{% block title %}Providers List{% endblock %}
+
+{% block body %}
+    <h1>Providers List</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Responsible</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Tax Reg. Number</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for provider in providers %}
+            <tr>
+                <td>{{ provider.id }}</td>
+                <td>{{ provider.code }}</td>
+                <td>{{ provider.name }}</td>
+                <td>{{ provider.responsible }}</td>
+                <td>{{ provider.address }}</td>
+                <td>{{ provider.city }}</td>
+                <td>{{ provider.phone }}</td>
+                <td>{{ provider.email }}</td>
+                <td>{{ provider.taxRegNumber }}</td>
+                <td>
+                    <a href="{{ path('provider_show', {'id': provider.id}) }}" class = "btn btn-info">show</a>
+                    <a href="{{ path('provider_edit', {'id': provider.id}) }}" class = "btn btn-warning">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="12">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('provider_new') }}"class = "btn btn-success">Create new</a>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'template.html.twig' %}
+
+{% block title %}New User{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box blue-bg">
+                <i class="fa fa-list"></i>
+                <div class="count">{{ categoriesCount }}</div>
+                <div class="title">Categories</div>
+            </div>
+            <!--/.info-box-->
+        </div>
+        <!--/.col-->
+
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box brown-bg">
+                <i class="fa fa-shopping-cart"></i>
+                <div class="count">{{ productsCount }}</div>
+                <div class="title">Products</div>
+            </div>
+            <!--/.info-box-->
+        </div>
+        <!--/.col-->
+
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box dark-bg">
+                <i class="fa fa-users"></i>
+                <div class="count">{{ clientsCount }}</div>
+                <div class="title">Client</div>
+            </div>
+            <!--/.info-box-->
+        </div>
+        <!--/.col-->
+
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box blue-bg">
+                <i class="fa fa-users"></i>
+                <div class="count">{{ providersCount }}</div>
+                <div class="title">Provider</div>
+            </div>
+            <!--/.info-box-->
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box green-bg">
+                <i class="fa fa-cubes"></i>
+                <div class="count">{{ totalStock }}</div>
+                <div class="title">Total Stock</div>
+            </div>
+            <!--/.info-box-->
+        </div>
+        <!--/.col-->
+
+    </div>
+
+    <!--/col-->
+
+    <!--/col-->
+
+    </div>
+{% endblock %}
